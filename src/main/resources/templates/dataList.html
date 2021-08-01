@@ -4,20 +4,20 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body class="d-flex flex-column h-100">
-
-<div class="container">
-    <div th:replace="fragments/bodyHeader :: bodyHeader" />
-    <table class="table table-striped">
-        <thead>
-            <tr> <th>#</th> <th>Data</th></tr>
-        </thead>
-        <tbody>
-            <tr th:each="helloData : ${helloDatas}"> <td th:text="${helloData.id}"></td> <td th:text="${helloData.inputData}"></td></tr>
-        </tbody>
-    </table>
-</div>
-
-</div> <!-- /container -->
+<body class="d-flex flex-column h-100 min-vh-100">
+<main class="flex-shrink-0">
+    <div class="container">
+        <div th:replace="fragments/bodyHeader :: bodyHeader" />
+            <table class="table table-striped">
+                <thead>
+                    <tr> <th>#</th> <th>Data</th></tr>
+                </thead>
+                <tbody>
+                    <tr th:each="helloData : ${helloDatas}"> <td th:text="${helloData.id}"></td> <td th:text="${helloData.inputData}"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div> <!-- /container -->
+</main>
 <div th:replace="fragments/footer :: footer" />
 </body> </html>
