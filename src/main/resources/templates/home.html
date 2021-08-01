@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class="container">
+    <div th:replace="fragments/bodyHeader :: bodyHeader" />
+    <form action="/hello" method="GET" id="nameForm">
+        <div class="row py-5 g-3 align-items-center d-flex justify-content-center">
+            <div class="col-auto">
+                <label for="nameField" class="col-form-label">Data</label>
+            </div>
+            <div class="col-auto">
+                <input class="form-control" name="myName" id="nameField">
+            </div>
+            <div class="col-auto">
+                <span class="form-text">
+                  Enter the data to be saved in the database.
+                </span>
+            </div>
+            <div class="d-grid gap-2 d-md-block  d-md-flex justify-content-md-center">
+                <button class="btn btn-outline-primary btn-sm">Submit</button>
+            </div>
+        </div>
+    </form>
+    <h1 class="text-center">Version</h1>
+    <h1 class="display-5 px-4 text-center" th:text="${version}">Empty🙀</h1>
+
+    <dl class="row py-5" style="max-width: 480px; margin: 0 auto">
+        <dt class="col-sm-3">Node Name</dt>
+        <dd class="col-sm-9" th:text="${infraInfo.nodeName}"></dd>
+
+        <dt class="col-sm-3">Node IP</dt>
+        <dd class="col-sm-9" th:text="${infraInfo.nodeIP}"></dd>
+
+        <dt class="col-sm-3">Pod Name</dt>
+        <dd class="col-sm-9" th:text="${infraInfo.podName}"></dd>
+
+        <dt class="col-sm-3">Pod IP</dt>
+        <dd class="col-sm-9" th:text="${infraInfo.podIP}"></dd>
+
+        <dt class="col-sm-3">Namespace</dt>
+        <dd class="col-sm-9" th:text="${infraInfo.namespace}"></dd>
+    </dl>
+    <div th:replace="fragments/footer :: footer" />
+</div> <!-- /container -->
+</body>
+</html>

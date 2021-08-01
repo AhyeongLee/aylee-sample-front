@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-
+  to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" integrity="sha384-
+  ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="/css/jumbotron-narrow.css" rel="stylesheet">
+    <title>OpenShift Demo</title>
+</head>
+<body>
+
+<div class="container">
+    <ul class="nav nav-pills pull-right">
+        <li><a href="/">Home</a></li>
+    </ul>
+
+
+    <table class="table table-striped">
+
+        <thead>
+
+        <tr> <th>#</th> <th>이름</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody>
+
+        <tr th:each="helloData : ${helloDatas}"> <td th:text="${helloData.id}"></td> <td th:text="${helloData.inputData}"></td>
+
+        </tr> </tbody> </table> </div>
+
+</div> <!-- /container -->
+
+</body> </html>
