@@ -4,7 +4,7 @@
     <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
-<body>
+<body class="d-flex flex-column h-100">
 <div class="container">
     <div th:replace="fragments/bodyHeader :: bodyHeader" />
     <form action="/hello" method="GET" id="nameForm">
@@ -28,7 +28,7 @@
     <h1 class="text-center">Version</h1>
     <h1 class="display-5 px-4 text-center" th:text="${version}">Empty🙀</h1>
 
-    <dl class="row py-5" style="max-width: 480px; margin: 0 auto">
+    <dl class="row py-5" style="max-width: 580px; margin: 0 auto">
         <dt class="col-sm-3">Node Name</dt>
         <dd class="col-sm-9" th:text="${infraInfo.nodeName}"></dd>
 
@@ -44,7 +44,7 @@
         <dt class="col-sm-3">Namespace</dt>
         <dd class="col-sm-9" th:text="${infraInfo.namespace}"></dd>
     </dl>
-    <div th:replace="fragments/footer :: footer" />
 </div> <!-- /container -->
+<div th:replace="fragments/footer :: footer" />
 </body>
 </html>

@@ -1,5 +1,5 @@
 application:
-  version: 2021-07-16T02.24.16
+  version: 2021-08-01T00.00.00
 
 server:
   port: 8080
